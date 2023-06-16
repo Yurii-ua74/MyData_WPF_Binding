@@ -1,0 +1,150 @@
+﻿<Window x:Class="WPF_Binding.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Binding"
+        mc:Ignorable="d"
+        Title="Form1" Height="700" Width="468">
+    <Grid Background="#87A2EB" Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Source="/im1.png" VerticalAlignment="Top"/>
+        <Image Grid.Row="1" Source="/im2.png" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" />
+        <Image Grid.Row="2" Source="/im3.png" HorizontalAlignment="Left" Height="25"/>
+        <Image Grid.Row="3" Source="/im4.png" HorizontalAlignment="Left" Height="25"/>
+        <Image Grid.Row="4" Source="/im5.png" HorizontalAlignment="Left" Height="25"/>
+        <Image Grid.Row="5" Source="/im6.png" HorizontalAlignment="Left" Height="25"/>
+        <Image Grid.Row="6" Source="/im7.png" HorizontalAlignment="Left" Height="25"/>
+        <Image Grid.Row="7" Source="/im8.png" HorizontalAlignment="Left" Height="25"/>
+        <Button x:Name="btn1" Grid.Row="10" Content="Назад" HorizontalAlignment="Left" FontSize="24" Foreground="AliceBlue" Width="159" Click="btn1_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#87A2EA" Offset="0"/>
+                    <GradientStop Color="#5DCDD9" Offset="0.5"/>
+                    <GradientStop Color="#87A2EA" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn2" Grid.Row="10" Content="Список кандидатів" HorizontalAlignment="Left" FontSize="24" Foreground="AliceBlue" Width="216" Margin="234,0,0,0" Click="btn2_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#87A2EA" Offset="0"/>
+                    <GradientStop Color="#5DCDD9" Offset="0.5"/>
+                    <GradientStop Color="#87A2EA" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn3" Grid.Row="9" Content="Зареєструвати" HorizontalAlignment="Left" FontSize="24" Foreground="AliceBlue" Width="216" 
+                VerticalAlignment="Center" Height="58" Click="btn3_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#87A2EA" Offset="0"/>
+                    <GradientStop Color="#5DCDD9" Offset="0.5"/>
+                    <GradientStop Color="#87A2EA" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn4" Content="Інший кандидат" HorizontalAlignment="Left" FontSize="24" Foreground="AliceBlue" Height="58" Margin="237,58,0,0" Grid.Row="8"
+                VerticalAlignment="Top" Grid.RowSpan="2" Width="216" Click="btn4_Click" >
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#87A2EA" Offset="0"/>
+                    <GradientStop Color="#5DCDD9" Offset="0.5"/>
+                    <GradientStop Color="#87A2EA" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="tbl1" HorizontalAlignment="Left" Margin="264,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" Height="37" RenderTransformOrigin="0.5,0.5" 
+                 Grid.Row="1" TextChanged="tbl1_TextChanged">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <DatePicker x:Name="dpic1" HorizontalAlignment="Left" Margin="264,0,0,0" Grid.Row="2" VerticalAlignment="Center" 
+                    Height="38" Width="186"  
+                    RenderTransformOrigin="0.537,0.826" FontSize="16" SelectedDateChanged="dpic1_SelectedDateChanged">
+            <DatePicker.BlackoutDates>
+                <CalendarDateRange Start="1/1/2005" End="1/1/2100"/>
+            </DatePicker.BlackoutDates>
+        </DatePicker>
+        <ComboBox x:Name="cb1" Margin="264,0,18,0" Grid.Row="3" VerticalAlignment="Top" Height="25" SelectionChanged="cb1_SelectionChanged" >
+            <TextBlock x:Name="tb_B">Вища</TextBlock>
+            <TextBlock>Середньо-технічна</TextBlock>
+            <TextBlock>Середня</TextBlock>
+            <TextBlock x:Name="tb_T">Три класи два коридори</TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="cb2"  Margin="264,29,18,0" Grid.Row="3" VerticalAlignment="Top" Height="25" Visibility="Hidden">
+            <TextBlock>Ветеринар</TextBlock>
+            <TextBlock>Дресирувальник</TextBlock>
+            <TextBlock>Пінгвінячий логопед</TextBlock>
+            <TextBlock>Щось інше</TextBlock>
+        </ComboBox>
+        <CheckBox x:Name="checkBox1" Content="" HorizontalAlignment="Left" Margin="237,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="18" Width="18" 
+                  Checked="checkBox1_Checked" Unchecked="checkBox1_Unchecked"/>
+        <ComboBox x:Name="cmBoxLang" HorizontalAlignment="Left" Height="27" Margin="264,0,0,0" Grid.Row="4" VerticalAlignment="Center" Width="78" Visibility="Hidden">
+            <TextBlock>English</TextBlock>
+            <TextBlock>Italy</TextBlock>
+            <TextBlock>French</TextBlock>
+            <TextBlock>German</TextBlock>
+            <TextBlock>Polish</TextBlock>
+            <TextBlock>Spanish</TextBlock>
+            <TextBlock>Japanese</TextBlock>
+            <TextBlock>Tagalog</TextBlock>
+            <TextBlock>Arab</TextBlock>
+        </ComboBox>
+        <RadioButton x:Name="rb1" Content="Т А К" HorizontalAlignment="Left" Margin="264,20,0,0" Grid.Row="5" VerticalAlignment="Top" Height="38" Width="66" RenderTransformOrigin="0.561,0.226" />
+        <RadioButton x:Name="rb2" Content="Н І" HorizontalAlignment="Left" Margin="357,20,0,0" Grid.Row="5" VerticalAlignment="Top" Height="38" Width="58" RenderTransformOrigin="0.561,0.226" />
+
+        <ComboBox x:Name="cbx1" HorizontalAlignment="Left" Height="32" Margin="259,10,0,0" Grid.Row="6" VerticalAlignment="Top" Width="191">
+            <TextBlock>До року</TextBlock>
+            <TextBlock>від 1 до 3 років</TextBlock>
+            <TextBlock>від 3 до 5 років</TextBlock>
+            <TextBlock>більше 5 років</TextBlock>
+        </ComboBox>
+        <StackPanel  Grid.Row="7" RenderTransformOrigin="0.513,0.459" Margin="246,0,0,0">
+            <RadioButton x:Name="rb3" Content="Т А К" HorizontalAlignment="Left" Margin="15,12,0,0" Grid.Row="7" Height="20"/>
+            <RadioButton x:Name="rb4" Content="Н І" HorizontalAlignment="Left" Margin="15,0,0,0" Grid.Row="7" VerticalAlignment="Center" Height="25"/>
+        </StackPanel>
+        <TextBlock x:Name="tblock1" HorizontalAlignment="Center" Margin="0,62,0,0" Grid.Row="7" TextWrapping="Wrap" FontSize="20" 
+                   Text="{Binding ElementName=tbl1,Path=Text }" VerticalAlignment="Top" Height="53" Grid.RowSpan="2" Width="448"/>
+        <ComboBox x:Name="cmBoxLangLevel" HorizontalAlignment="Left" Height="27" Margin="347,0,0,0" Grid.Row="4" VerticalAlignment="Center" Width="103" Visibility="Hidden">
+            <TextBlock>Beginner</TextBlock>
+            <TextBlock>Elementary</TextBlock>
+            <TextBlock>Pre_Intermediante</TextBlock>
+            <TextBlock>Intermediante</TextBlock>
+            <TextBlock>Upper_Intermediante</TextBlock>
+            <TextBlock>Advanced</TextBlock>
+            <TextBlock>Proficiency</TextBlock>
+        </ComboBox>
+
+    </Grid>
+</Window>
